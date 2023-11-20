@@ -1,0 +1,704 @@
+/* Общие настройки */
+/* подключаем шрифты */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Open+Sans:wght@400;600;700;800&family=Oswald:wght@400;500;700&family=Roboto:wght@400;500&display=swap");
+@font-face {
+  font-family: "AvenirMedium";
+  src: url("../fonts/AvenirMedium/AvenirMedium.eot");
+  src: url("../fonts/AvenirMedium/AvenirMedium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/AvenirMedium/AvenirMedium.woff") format("woff"),
+    url("../fonts/AvenirMedium/AvenirMedium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+html {
+  box-sizing: border-box;
+  /* Говорит браузеру учитывать любые границы и внутренние отступы в значениях,
+       которые мы указываем в ширине и высоте элемента */
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  /* наследует значение box-sizing от родительского элемента*/
+}
+img {
+  display: block;
+  /* делаем элемент блочным */
+  max-width: 100%;
+  /*чтобы изображение сжималось, если контейнер меньше, не будет создавать горизонтальную полосу прокрутки,
+        адаптивный дизайн */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  /* обнуляем отступы */
+  font-family: "Lato", "Open Sans", sans-serif, "AvenirMedium", "Georgia";
+  width: 1920px;
+}
+/* задаем переменные с цветами из фигмы, чтобы потом их вызывать */
+/* :root {
+    --accent-color: #01996D;
+    --accent-color-light: rgba(1, 152, 109, 0.2)
+    --text-color: #484848;
+    --white-color: #fff;
+    --background-color: #245852;
+    --black: #000000;
+} */
+
+/* Шапка (Навбар) */
+
+.container_header {
+  width: 1920px;
+  height: 980px;
+  margin-bottom: 172px;
+}
+.navbar {
+  width: 1920px;
+  height: 85px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.logo {
+  width: 79.565px;
+  height: 23.04px;
+  margin-left: 101px;
+}
+.nav_menu {
+  width: 560px;
+  height: 25px;
+  margin-right: 112px;
+  padding-bottom: 26px;
+}
+.nav_menu_items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 72px;
+  min-width: 560px;
+  padding-left: 0px;
+  margin-top: 0px;
+}
+.nav_menu_item {
+  color: #292929;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 500;
+  list-style: none;
+  text-decoration: none;
+  cursor: pointer;
+  min-width: 100px;
+}
+button {
+  width: 183px;
+  height: 51px;
+  border-radius: 4px;
+  border: 1px solid #01996d;
+  background: #01996d;
+  color: #fff;
+  text-align: center;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  cursor: pointer;
+}
+.nav_request {
+  width: 277px;
+  height: 51px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 103px;
+}
+.p_button {
+  color: #292929;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 35px;
+}
+.header_button {
+}
+a {
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  cursor: pointer;
+}
+@media only screen and (max-width: 992px) {
+  .navbar {
+    justify-content: normal;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+  .nav_request {
+    padding-top: 40px;
+    margin-left: 40px;
+  }
+  .nav_menu {
+    margin-top: 50px;
+  }
+  .logo {
+    margin-left: 182px;
+  }
+  .nav_menu_items {
+    padding-left: 40px;
+  }
+}
+
+/* шапка BG */
+
+.bg_header {
+  width: 1920px;
+  height: 895px;
+  background: linear-gradient(
+      113deg,
+      #fff 18.15%,
+      rgba(255, 255, 255, 0) 53.07%
+    ),
+    rgba(0, 0, 0, 0.1);
+  background-image: url(../img/bgimg_header.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.header_h1 {
+  color: #01996d;
+  font-family: "Georgia";
+  font-size: 65px;
+  font-weight: 700;
+  width: 440px;
+  height: 148px;
+  padding-top: 175px;
+  margin-left: 275px;
+  margin-top: 0px;
+  margin-bottom: 180px;
+}
+.header_p {
+  width: 420px;
+  height: 123px;
+  color: #484848;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 144.5%;
+  margin-left: 275px;
+  margin-bottom: 18px;
+}
+.header_button-button {
+}
+.header_bg-button {
+  margin-left: 275px;
+  border-radius: 4px;
+  border: 1px solid #01996d;
+  background: #01996d;
+  width: 227px;
+  height: 65px;
+}
+@media only screen and (max-width: 992px) {
+  .bg_header {
+    width: 100%;
+  }
+}
+/* Секция Steps */
+
+.steps {
+  width: 1413px;
+  height: 1386px;
+  margin-left: 274px;
+  margin-bottom: 51px;
+}
+.steps_inner {
+}
+.steps_p {
+  color: #424242;
+  font-family: "Lato";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 157%; /* 37.68px */
+  margin-bottom: 0px;
+}
+.works {
+  display: flex;
+  margin-bottom: 50px;
+}
+.p_works {
+  width: 650px;
+  color: #424242;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%; /* 30px */
+  padding-top: 18px;
+}
+.h2_works {
+  color: #01996d;
+  font-family: "Georgia";
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 157%;
+  width: 584px;
+  height: 158px;
+  margin-right: 136px;
+  margin-top: 0px;
+}
+.cards_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.card_01 {
+  width: 390px;
+  height: 937px;
+}
+.h1_01 {
+  color: rgba(1, 153, 109, 0.2);
+  text-align: center;
+  font-family: "Georgia";
+  font-size: 150px;
+  font-weight: 400;
+  line-height: 150%;
+  padding-right: 227px;
+  margin-bottom: 7px;
+}
+.h1_01::after {
+  content: "Personalize";
+  color: #000;
+  text-align: center;
+  font-family: "Georgia";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 150%;
+  position: relative;
+  /* top: -10px; */
+  left: -65px;
+}
+/* .p_01 {
+  color: #000;
+  text-align: center;
+  font-family: "Georgia";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 150%; 
+
+} */
+.p_01_text {
+  width: 382px;
+  height: 150px;
+  color: #424242;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%; /* 30px */
+  margin-bottom: 61px;
+}
+
+.img_01 {
+  width: 390px;
+  height: 492px;
+  border-radius: 12px;
+  background: url(<path-to-image>),
+    lightgray 0px -65.057px / 100% 118.721% no-repeat, #c4c4c4;
+}
+.img_01_inner {
+  position: relative;
+  top: -267px;
+  left: 205px;
+  width: 185px;
+  height: 148px;
+  fill: linear-gradient(
+    123deg,
+    rgba(24, 24, 24, 0.2) 2.51%,
+    rgba(196, 196, 196, 0) 95.42%
+  );
+}
+.card_02 {
+  width: 392px;
+  height: 854px;
+}
+.h1_02 {
+  color: rgba(1, 153, 109, 0.2);
+  text-align: center;
+  font-family: "Georgia";
+  font-size: 150px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 285px;
+  padding-right: 89px;
+  width: 590px;
+  margin-bottom: 9px;
+}
+
+.h1_02::after {
+  content: "Write & Understand";
+  color: #000;
+  text-align: center;
+  font-family: "Georgia";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 150%;
+  position: relative;
+  top: 0px;
+  left: -100px;
+}
+
+/* .p_02 {
+  color: #000;
+  text-align: center;
+  font-family: "Georgia";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 150%;
+} */
+.p_02_text {
+  width: 382px;
+  height: 90px;
+  color: #424242;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%; /* 30px */
+  margin-bottom: 39px;
+}
+.img_02 {
+  width: 390px;
+  height: 492px;
+  border-radius: 12px;
+  background: url(<path-to-image>),
+    lightgray 0px -65.057px / 100% 118.721% no-repeat, #c4c4c4;
+}
+.card_03 {
+  width: 441px;
+  height: 856px;
+}
+.h1_03 {
+  color: rgba(1, 153, 109, 0.2);
+  text-align: center;
+  font-family: "Georgia";
+  font-size: 150px;
+  font-weight: 400;
+  line-height: 150%;
+  padding-top: 49px;
+  padding-right: 147px;
+}
+
+.h1_03::after {
+  content: "Alivio!";
+  color: #000;
+  text-align: center;
+  font-family: "Georgia";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 150%;
+  position: relative;
+  top: 5px;
+  left: -50px;
+}
+/* .p_03 {
+  color: #000;
+  text-align: center;
+  font-family: "Georgia";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 150%;
+} */
+.p_03_text {
+  width: 430px;
+  height: 90px;
+  color: #424242;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 51px;
+}
+.img_03 {
+  width: 390px;
+  height: 492px;
+  border-radius: 12px;
+  background: url(<path-to-image>),
+    lightgray 0px -65.057px / 100% 118.721% no-repeat, #c4c4c4;
+  margin-left: 6px;
+}
+@media only screen and (max-width: 992px) {
+  .steps {
+    margin-bottom: 3100px;
+  }
+  .works {
+    flex-direction: column;
+  }
+  .cards_inner {
+    flex-direction: column;
+  }
+  .card {
+    width: 50%;
+  }
+  .card_01 {
+    margin-bottom: 180px;
+  }
+  .card_03 {
+    margin-top: 700px;
+    margin-bottom: 280px;
+  }
+  .img_01 {
+    width: 100%;
+    height: auto;
+  }
+  .img_02 {
+    width: 100%;
+    height: auto;
+  }
+  .img_03 {
+    width: 100%;
+    height: auto;
+  }
+  /* .p_01_text {
+    font-size: 30px;
+  } */
+}
+/* Секция Видео */
+.video {
+  width: 1920px;
+  height: 922px;
+  display: flex;
+  background: #245852;
+  cursor: pointer;
+  margin-bottom: 120px;
+}
+.video_text {
+  padding-top: 310px;
+  padding-left: 207px;
+  margin-right: 35px;
+}
+.video_h2 {
+  width: 580px;
+  color: #fff;
+  margin-bottom: 33px;
+  font-family: "Georgia";
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 157%;
+}
+.play {
+  position: relative;
+  top: -300px;
+  left: 405px;
+}
+.video_p {
+  color: #fff;
+  font-family: "Lato";
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 157%; /* 37.68px */
+  margin-bottom: 57px;
+  width: 560px;
+}
+.video_button {
+  height: 65px;
+  width: 240px;
+  color: #fff;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.video_video {
+  width: 890px;
+  height: 500px;
+  margin-top: 229px;
+  background-image: url(../img/video.png);
+  border-radius: 16.333px;
+  background: rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 992px) {
+  .video {
+    flex-direction: column;
+    height: 1100px;
+  }
+  .video_video {
+    margin-left: 173px;
+    margin-top: 98px;
+  }
+  .video_text {
+    padding-top: 50px;
+    padding-left: 355px;
+  }
+  .video_button {
+    margin-left: 135px;
+  }
+  .img_01_inner {
+    width: 45%;
+    height: auto;
+    top: -475px;
+    left: 390px;
+  }
+}
+/* Секция Продукт  */
+
+.product {
+  width: 1370px;
+  height: 648px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 168px;
+}
+.product_img {
+  width: 638.465px;
+  height: 573.26px;
+  border-radius: 18.112px;
+  background: rgba(1, 153, 109, 0.2);
+  background-image: url(../img/Image_card1.png);
+  margin-left: 60px;
+}
+.product_card {
+  width: 296.139px;
+  height: 293.901px;
+  border-radius: 3.73px;
+  background: #fff;
+  position: relative;
+  top: 350px;
+  left: -60px;
+}
+.card_h5 {
+  color: #000;
+  text-align: center;
+  font-family: "Lato";
+  font-size: 14.49px;
+  font-weight: 600;
+  line-height: 157%;
+  padding-top: 27px;
+}
+.card_h5::after {
+  content: "";
+  width: 110px;
+  height: 1px;
+  background: #000;
+  display: block;
+  margin: 5px auto 14px;
+}
+.photo {
+  border-radius: 3.73px;
+  background: #fff;
+}
+.photo::after {
+  content: "Mikayla";
+  color: #000;
+  text-align: center;
+  font-family: "Lato";
+  font-size: 11.935px;
+  font-weight: 400;
+  line-height: 157%;
+  display: block;
+  margin: 10px auto 20px;
+}
+
+.img_card {
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  margin: 0 auto;
+}
+.card_h5_list {
+  /* margin-bottom: 22px; */
+  margin-left: 63px;
+  /* padding-top: 6px; */
+  color: #000;
+  font-family: "Georgia";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 157%;
+}
+.menu_list {
+  padding-left: 61px;
+}
+.list_item {
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+  font-family: "Lato";
+  font-size: 10.619px;
+  font-weight: 400;
+  line-height: 157%;
+  margin-bottom: 16px;
+}
+.product_text {
+}
+.product_h5 {
+  color: #424242;
+  font-family: "Lato";
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 157%; /* 39.25px */
+  margin-bottom: 10px;
+}
+.product_h2 {
+  width: 584px;
+  color: #01996d;
+  font-family: "Georgia";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 157%; /* 78.5px */
+  margin-bottom: 20px;
+}
+.product_p {
+  width: 530px;
+  height: 81px;
+  color: #484848;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 40px;
+}
+.product_button {
+  width: 227px;
+  height: 65px;
+}
+@media only screen and (max-width: 992px) {
+  .product_img {
+    min-width: 638.465px;
+    min-height: 573.26px;
+  }
+  .product {
+    flex-direction: column;
+    margin-bottom: 400px;
+  }
+}
+/* Секция Футер */
+.footer {
+  width: 1920px;
+  height: 654px;
+  background: #245852;
+}
+.footer_h4 {
+  color: #fff;
+  font-family: "Avenir";
+  font-size: 40px;
+  font-weight: 900;
+  padding-top: 97px;
+  margin-left: 276px;
+}
+.footer_list {
+  padding-left: 275px;
+  margin-top: 67px;
+}
+.footer_list_item {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Lato";
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
