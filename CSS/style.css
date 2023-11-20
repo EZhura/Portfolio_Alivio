@@ -561,6 +561,7 @@ a {
 }
 .img_card {
   background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  background: #ffffff;
   margin: 0 auto;
 }
 .card_h5_list {
