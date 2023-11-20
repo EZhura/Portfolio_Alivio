@@ -45,15 +45,6 @@ body {
   font-family: "Lato", "Open Sans", sans-serif, "AvenirMedium", "Georgia";
   width: 1920px;
 }
-/* задаем переменные с цветами из фигмы, чтобы потом их вызывать */
-/* :root {
-    --accent-color: #01996D;
-    --accent-color-light: rgba(1, 152, 109, 0.2)
-    --text-color: #484848;
-    --white-color: #fff;
-    --background-color: #245852;
-    --black: #000000;
-} */
 
 /* Шапка (Навбар) */
 
@@ -127,8 +118,6 @@ button {
   font-weight: 500;
   margin-right: 35px;
 }
-.header_button {
-}
 a {
   text-decoration: none; /*убираем подчеркивание текста ссылок*/
   cursor: pointer;
@@ -196,8 +185,6 @@ a {
   margin-left: 275px;
   margin-bottom: 18px;
 }
-.header_button-button {
-}
 .header_bg-button {
   margin-left: 275px;
   border-radius: 4px;
@@ -211,6 +198,7 @@ a {
     width: 100%;
   }
 }
+
 /* Секция Steps */
 
 .steps {
@@ -284,15 +272,6 @@ a {
   /* top: -10px; */
   left: -65px;
 }
-/* .p_01 {
-  color: #000;
-  text-align: center;
-  font-family: "Georgia";
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 150%; 
-
-} */
 .p_01_text {
   width: 382px;
   height: 150px;
@@ -303,7 +282,6 @@ a {
   line-height: 150%; /* 30px */
   margin-bottom: 61px;
 }
-
 .img_01 {
   width: 390px;
   height: 492px;
@@ -339,7 +317,6 @@ a {
   width: 590px;
   margin-bottom: 9px;
 }
-
 .h1_02::after {
   content: "Write & Understand";
   color: #000;
@@ -352,15 +329,6 @@ a {
   top: 0px;
   left: -100px;
 }
-
-/* .p_02 {
-  color: #000;
-  text-align: center;
-  font-family: "Georgia";
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 150%;
-} */
 .p_02_text {
   width: 382px;
   height: 90px;
@@ -392,7 +360,6 @@ a {
   padding-top: 49px;
   padding-right: 147px;
 }
-
 .h1_03::after {
   content: "Alivio!";
   color: #000;
@@ -405,14 +372,6 @@ a {
   top: 5px;
   left: -50px;
 }
-/* .p_03 {
-  color: #000;
-  text-align: center;
-  font-family: "Georgia";
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 150%;
-} */
 .p_03_text {
   width: 430px;
   height: 90px;
@@ -463,9 +422,6 @@ a {
     width: 100%;
     height: auto;
   }
-  /* .p_01_text {
-    font-size: 30px;
-  } */
 }
 /* Секция Видео */
 .video {
@@ -603,7 +559,6 @@ a {
   display: block;
   margin: 10px auto 20px;
 }
-
 .img_card {
   background: url(<path-to-image>), lightgray 50% / cover no-repeat;
   margin: 0 auto;
