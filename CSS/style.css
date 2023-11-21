@@ -122,7 +122,10 @@ a {
   text-decoration: none; /*убираем подчеркивание текста ссылок*/
   cursor: pointer;
   color: inherit;
-  /* убираем цвет ссылки */
+  /* убираем цвет */
+}
+a:hover {
+  opacity: 0.8;
 }
 @media only screen and (max-width: 992px) {
   .navbar {
@@ -659,4 +662,11 @@ a {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 60px;
+  cursor: pointer;
+}
+.footer_list_item:last-child {
+  margin-bottom: 0;
+}
+.footer_list_item:hover {
+  opacity: 0.8;
 }
