@@ -267,15 +267,14 @@ a:hover {
 }
 .h1_01::after {
   content: "Personalize";
-  color: #000;
-  text-align: center;
-  font-family: "Georgia";
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 150%;
-  position: relative;
-  /* top: -10px; */
-  left: -65px;
+  width: 382px;
+  height: 150px;
+  color: #424242;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%; /* 30px */
+  margin-bottom: 61px;
 }
 .p_01_text {
   width: 382px;
